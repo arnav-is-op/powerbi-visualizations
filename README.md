@@ -4,52 +4,97 @@ An end-to-end Power BI project analyzing **479K real-world data job postings fro
 
 ---
 
+
+## 📁 Project Structure
+
+```
+powerbi-data-jobs-analysis/
+├── 1_Data_Jobs_Dashboard.pbix      # Main dashboard + drill through
+├── 2_visualizations.pbix           # Full visualization report
+├── images/                         # Screenshots and GIFs
+└── README.md
+```
+
+---
+
 # Part 1 — Data Jobs Dashboard
 
-A fully interactive Power BI dashboard answering key questions about the data jobs market — salary trends, job counts, hiring platforms, and WFH patterns — with a drill-through page for deep-diving into any specific job title.
+A fully interactive Power BI dashboard designed to help **job seekers find their ideal data role** — whether you're a fresher exploring salaries, someone looking for remote-friendly jobs, or a professional comparing roles across locations and platforms. Built on 479K real job postings from 2024, this dashboard makes it easy to explore the data jobs market at a glance and drill deep into any specific role.
 
 ![Dashboard Demo](images/demo2.gif)
+
+---
+
+## 🎯 Purpose
+
+Job hunting in data can be overwhelming — hundreds of roles, varying salaries, different locations, different requirements. This dashboard cuts through the noise and answers the questions that actually matter to a job seeker:
+
+- Which data job pays the most?
+- Is a degree actually required?
+- Are remote (WFH) opportunities available?
+- Which platform should I apply on?
+- What is the salary range for my target role — minimum, median, maximum?
+- Where in the world are most jobs posted?
+- Is the job market growing or shrinking?
 
 ---
 
 ## 📊 Dashboard Pages
 
 ### Main Dashboard
-Answers: *What are the salary trends? How many jobs exist per title? What is the hourly vs yearly salary relationship?*
-
 ![Main Dashboard](images/11_main_dashboard.png)
 
-**Includes:**
-- 479K total job count with salary star rating
-- Median yearly salary ($113K) and median hourly salary ($47.62)
-- Job trend line chart across 2024
-- Hourly vs yearly salary scatter plot
-- Job counts bar chart
-- Summary table with sparklines showing job trends per title
-- Slicer to filter by job title
+The main page gives a complete overview of the data jobs market in 2024. It is designed to be simple and intuitive — every visual answers a specific question so users can quickly get the information they need without any confusion.
+
+**What you can see:**
+- **479K job postings** analyzed with an overall **3.5 star salary rating**
+- **Median yearly salary of $113K** and **median hourly salary of $47.62** across all data roles
+- **Job trend line chart** — shows how job postings changed month by month throughout 2024, with a dashed trendline showing the overall direction
+- **Hourly vs Yearly salary scatter plot** — compare all job titles at once to see which roles offer the best compensation on both hourly and yearly basis
+- **Job counts bar chart** — instantly see which roles have the most openings (Data Engineer leads, followed by Data Analyst)
+- **Summary table with sparklines** — a clean table showing every job title's median yearly salary, median hourly salary, job count, and a sparkline showing the hiring trend
+- **Job title slicer** — filter the entire dashboard to focus on any specific role
 
 ---
 
 ### Job Title Drill Through
-Click any job title on the main dashboard to drill through to a dedicated page showing deep insights for that specific role.
-
 ![Drill Through](images/12_drill_through.png)
 
-**Includes:**
-- Median yearly & hourly salary gauge charts
-- WFH%, No Degree Mention%, Health Insurance% donut charts
-- Global job map
-- Top hiring platforms bar chart
-- Job types breakdown
+The drill-through page is the most powerful feature of this dashboard. Select any job title from the main dashboard and drill through to get a **dedicated insights page** for that specific role — giving job seekers a complete picture before they apply.
+
+**How to use it:** Right-click any job title on the main dashboard → select Drill Through → Job Title, or use the "Drill Through to Job Title" button after selecting a title from the slicer.
+
+**What you can see for any selected role:**
+- **Salary gauge charts** — median yearly and hourly salary with min/max range shown, so you know what to expect and what to negotiate
+- **WFH%** — what percentage of postings for this role offer work from home
+- **No Degree Mention%** — how many postings don't require a degree (great insight for non-traditional candidates)
+- **Health Insurance%** — how many postings mention health insurance benefits
+- **Global job map** — where in the world are jobs for this role posted, so you can target the right locations
+- **Top hiring platforms** — LinkedIn, BeBee, Indeed, ZipRecruiter and more ranked by job count, so you know exactly where to apply
+- **Job types breakdown** — full-time vs contract vs internship vs part-time split
+
+---
+
+## 🔍 Q&A Search Feature
+
+The dashboard also includes a **Q&A search bar** — click it and type any question about the data in plain English to get instant visual answers. For example:
+- *"median salary by job title"*
+- *"count of jobs in United States"*
+- *"top companies by job count"*
+
+This makes the dashboard accessible even to users who don't know how to navigate Power BI visuals.
 
 ---
 
 ## 📌 Key Features — Dashboard
 
-- **Drill-through** — click any job title to get a dedicated insights page
-- **Slicer** — filter entire dashboard by job title
-- **DAX measures** — median salary, job count, salary star rating calculated measures
-- **Gauge charts, scatter plots, sparklines** — advanced visual types
+- **Drill-through** — click any job title for a full dedicated insights page
+- **Q&A search bar** — ask questions in plain English and get instant visual answers
+- **Job title slicer** — filter the entire dashboard to any specific role instantly
+- **DAX measures** — median salary, job count, and salary star rating built using DAX
+- **Sparklines** — mini trend charts inside the summary table showing hiring momentum per role
+- **Gauge charts** — show salary with min/max context so you know the full range
+- **Designed for simplicity** — clean layout with clear titles so anyone can understand the insights without a tutorial
 
 ---
 
@@ -151,19 +196,6 @@ Bookmarks used to toggle between filtered/unfiltered states and show/hide slicer
 - **Bookmarks & buttons** — toggle views, show/hide slicers, reset filters
 - **Real questions answered** — every page answers a specific business question about the data jobs market
 
----
-
----
-
-## 📁 Project Structure
-
-```
-powerbi-data-jobs-analysis/
-├── 1_Data_Jobs_Dashboard.pbix      # Main dashboard + drill through
-├── 2_visualizations.pbix           # Full visualization report
-├── images/                         # Screenshots and GIFs
-└── README.md
-```
 
 ---
 
@@ -195,5 +227,3 @@ Detailed documentation on how each visualization was built, including design dec
 
 - [SQL Data Jobs Analysis](https://github.com/arnav-is-op) — SQL-based analysis of the same dataset
 - [Python Job Postings Analysis](https://github.com/arnav-is-op/python_project_for_job_analysis) — Python/Pandas analysis with Matplotlib & Seaborn visualizations
-
----
