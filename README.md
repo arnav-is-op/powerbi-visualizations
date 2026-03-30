@@ -1,8 +1,65 @@
-# Data Jobs Visualization Report 📊
+# Power BI Data Jobs Analysis 📊
 
-A comprehensive Power BI report demonstrating 15+ visualization types applied to real-world job market data (479K job postings from 2024). The report features interactive navigation, bookmarks, slicers, and drill-through — built while completing Luke Barousse's Power BI for Data Analytics course.
+An end-to-end Power BI project analyzing **479K real-world data job postings from 2024** — built across two reports covering an interactive dashboard with drill-through, and a comprehensive visualization library with 15+ chart types.
 
-![Dashboard Demo](images/demo.gif)
+---
+
+# Part 1 — Data Jobs Dashboard
+
+A fully interactive Power BI dashboard answering key questions about the data jobs market — salary trends, job counts, hiring platforms, and WFH patterns — with a drill-through page for deep-diving into any specific job title.
+
+![Dashboard Demo](images/demo2.gif)
+
+---
+
+## 📊 Dashboard Pages
+
+### Main Dashboard
+Answers: *What are the salary trends? How many jobs exist per title? What is the hourly vs yearly salary relationship?*
+
+![Main Dashboard](images/11_main_dashboard.png)
+
+**Includes:**
+- 479K total job count with salary star rating
+- Median yearly salary ($113K) and median hourly salary ($47.62)
+- Job trend line chart across 2024
+- Hourly vs yearly salary scatter plot
+- Job counts bar chart
+- Summary table with sparklines showing job trends per title
+- Slicer to filter by job title
+
+---
+
+### Job Title Drill Through
+Click any job title on the main dashboard to drill through to a dedicated page showing deep insights for that specific role.
+
+![Drill Through](images/12_drill_through.png)
+
+**Includes:**
+- Median yearly & hourly salary gauge charts
+- WFH%, No Degree Mention%, Health Insurance% donut charts
+- Global job map
+- Top hiring platforms bar chart
+- Job types breakdown
+
+---
+
+## 📌 Key Features — Dashboard
+
+- **Drill-through** — click any job title to get a dedicated insights page
+- **Slicer** — filter entire dashboard by job title
+- **DAX measures** — median salary, job count, salary star rating calculated measures
+- **Gauge charts, scatter plots, sparklines** — advanced visual types
+
+---
+
+---
+
+# Part 2 — Data Jobs Visualization Report
+
+A comprehensive Power BI report demonstrating 15+ visualization types applied to the same dataset, with an interactive home page navigation linking to each chart category.
+
+![Visualization Demo](images/demo.gif)
 
 ---
 
@@ -11,23 +68,13 @@ A comprehensive Power BI report demonstrating 15+ visualization types applied to
 ```
 powerbi-visualizations-demo/
 ├── 2_visualizations.pbix       # Power BI report file
-├── job_postings_flat.csv       # Dataset (479K job postings)
-├── notes.ipynb                 # Detailed notes on how each visualization was built
 ├── images/                     # Screenshots of all report pages
 └── README.md
 ```
 
 ---
 
-## 📓 Notes
-
-See `notes.ipynb` for detailed documentation on how each visualization was built.
-
----
-
 ## 🗂️ Report Pages
-
-The report has an interactive home page with navigation buttons linking to each section.
 
 ### 🏠 Home — Navigation Page
 ![Home](images/01_home_navigation.png)
@@ -97,13 +144,26 @@ Bookmarks used to toggle between filtered/unfiltered states and show/hide slicer
 
 ---
 
-## 📌 Key Features
+## 📌 Key Features — Visualization Report
 
 - **Interactive navigation** — home page with buttons linking to each chart section
 - **15+ visualization types** — column, bar, line, area, pie, donut, scatter, map, filled map, ribbon, waterfall, funnel, table, card, slicer
 - **Bookmarks & buttons** — toggle views, show/hide slicers, reset filters
-- **Slicers** — filter by job title, date range, and salary range across all visuals
 - **Real questions answered** — every page answers a specific business question about the data jobs market
+
+---
+
+---
+
+## 📁 Project Structure
+
+```
+powerbi-data-jobs-analysis/
+├── 1_Data_Jobs_Dashboard.pbix      # Main dashboard + drill through
+├── 2_visualizations.pbix           # Full visualization report
+├── images/                         # Screenshots and GIFs
+└── README.md
+```
 
 ---
 
@@ -115,24 +175,25 @@ Bookmarks used to toggle between filtered/unfiltered states and show/hide slicer
 **Fields include:** job title, company name, salary (yearly & hourly), location, job type, WFH status, degree requirement, health insurance, skills
 
 ---
-## 📂 Data Source
-Dataset sourced from [Luke Barousse's Data Jobs Dataset](https://drive.google.com/file/d/1xiNSeNRKiuTrCDmJbDo3ukom47HaBeQj/view?usp=drive_link) — 479K job postings from 2024.
 
----
-## 📓 Notes
- 
-Detailed documentation on how each visualization was built, including design decisions and lessons learned.
- 
-👉 [View Notes on Google Colab](https://colab.research.google.com/drive/1l9vjSmjTugoo8AjMN7IMlOIiUhUHG57d)
- 
----
 ## 🛠️ Tools Used
 
--- Power BI Desktop — report building, visualizations, bookmarks, slicers, buttons, navigation
+- **Power BI Desktop** — report building, visualizations, bookmarks, slicers, buttons, navigation, drill-through
+- **DAX** — calculated measures for median salary, job count, salary star rating
 
 ---
 
+## 📓 Notes
 
-## 🔗 Author
+Detailed documentation on how each visualization was built, including design decisions and lessons learned.
 
-Arnav Heerakar
+👉 [View Notes on Google Colab](https://colab.research.google.com/drive/1l9vjSmjTugoo8AjMN7IMlOIiUhUHG57d)
+
+---
+
+## 🔗 Related Projects
+
+- [SQL Data Jobs Analysis](https://github.com/arnav-is-op) — SQL-based analysis of the same dataset
+- [Python Job Postings Analysis](https://github.com/arnav-is-op/python_project_for_job_analysis) — Python/Pandas analysis with Matplotlib & Seaborn visualizations
+
+---
